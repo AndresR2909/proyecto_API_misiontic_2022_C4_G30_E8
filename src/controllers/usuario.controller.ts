@@ -13,6 +13,7 @@ import {
   response
 } from '@loopback/rest';
 import axios from 'axios';
+import {configuracion} from '../config/config';
 import {Usuario} from '../models';
 import {UsuarioRepository} from '../repositories';
 import {AuthService} from '../services';
@@ -51,7 +52,7 @@ export class UsuarioController {
     usuario.password = claveCifrada;
 
     let tipo = ''; //Definimos el tipo de comunicacion
-    tipo = 'sms';
+    tipo = configuracion.tipoComunicacion;
     let servicioWeb = '';
     let destino = '';
 
@@ -69,7 +70,7 @@ export class UsuarioController {
     const contenido = `Hola, ${usuario.nombre} ${usuario.apellidos} su contraseña en el portal es: ${clave}`
     axios({
       method: 'post',
-      url: 'http://localhost:5000/' + servicioWeb, //Si quiero enviar por mensaje cambiar a send_email
+      url: configuracion.baseURL + servicioWeb, //Si quiero enviar por mensaje cambiar a send_email
 
       headers: {
         'Accept': 'application/json',

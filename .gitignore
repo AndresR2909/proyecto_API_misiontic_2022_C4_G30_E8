@@ -64,4 +64,7 @@ typings/
 *.tsbuildinfo
 
 #datasource con cadena de conexion a db mongo
-src/datasources/mongo.datasource.ts
+#src/datasources/mongo.datasource.ts
+
+#archivo de configuracion con parametros
+src/config/config.ts
