@@ -11,7 +11,6 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
 import {AdministradorStrategy} from './strategies/admin.strategy';
-
 export {ApplicationConfig};
 
 export class ProyectoApiMisiontic2022C4G30E8Application extends BootMixin(
