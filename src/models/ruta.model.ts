@@ -10,16 +10,16 @@ export class Ruta extends Entity {
   id?: string;
 
   @property({
-    type: 'object',
+    type: 'string',
     required: true,
   })
-  origen: object;
+  origen: string;
 
   @property({
-    type: 'object',
+    type: 'string',
     required: true,
   })
-  destino: object;
+  destino: string;
 
   @property({
     type: 'string',

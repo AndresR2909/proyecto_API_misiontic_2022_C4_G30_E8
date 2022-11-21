@@ -46,10 +46,10 @@ export class Vuelo extends Entity {
   nombre_piloto: string;
 
   @property({
-    type: 'object',
+    type: 'string',
     required: true,
   })
-  ruta: object;
+  ruta: string;
 
 
   constructor(data?: Partial<Vuelo>) {
